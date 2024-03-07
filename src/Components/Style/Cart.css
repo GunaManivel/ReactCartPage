@@ -1,0 +1,59 @@
+.navbar{
+    font-family: Ultra;
+}
+.card-body,
+.btn {
+    font-family: Viga;
+}
+.nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 95%;
+    /* Ensure the card takes full width */
+    height:95%;
+    /* Allow the height to adjust based on content */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    /* Make the card flex container */
+    flex-direction: column;
+    /* Arrange child elements vertically */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height:auto;
+    /* Set a fixed height for the images */
+    object-fit: cover;
+    /* Scale the image while preserving its aspect ratio */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
