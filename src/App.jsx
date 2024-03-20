@@ -55,7 +55,7 @@ const App = () => {
       stock: 36,
       brand: "Samsung",
       category: "smartphones",
-      thumbnail: "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      thumbnail: "https://cdn.dummyjson.com/product-images/3/1.jpg",
       images: ["https://cdn.dummyjson.com/product-images/3/1.jpg"],
     },
     {

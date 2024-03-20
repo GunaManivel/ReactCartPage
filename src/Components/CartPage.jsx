@@ -1,7 +1,6 @@
-// CartPage.js
-
 import React from "react";
 import { useCart } from "./CartContext";
+import CartTable from "./CartTable"; // Import the new component
 
 const CartPage = () => {
   const { cartItems, increaseQuantity, decreaseQuantity } = useCart();
@@ -28,34 +27,9 @@ const CartPage = () => {
   return (
     <div>
       <h1>Cart Page</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cartItems.map((item) => (
-            <tr key={item.id}>
-              <td>{item.name}</td>
-              <td>{item.price}</td>
-              <td>
-                <button onClick={() => handleDecreaseQuantity(item.id)}>
-                  -
-                </button>
-                {item.quantity}
-                <button onClick={() => handleIncreaseQuantity(item.id)}>
-                  +
-                </button>
-              </td>
-              <td>{item.price * item.quantity}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <button onClick={() => console.log("View Cart")}>View Cart</button>{" "}
+      {/* Add View Cart button */}
+      <CartTable cartItems={cartItems} /> {/* Render the CartTable component */}
       <div>
         <p>Total Quantity: {calculateTotalQuantity()}</p>
         <p>Total Amount: {calculateTotalAmount()}</p>

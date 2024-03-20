@@ -1,10 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-// import './index.css'
+import ReactDOM from "react-dom";
+import App from "./App";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
-  <App />
-  // </React.StrictMode>,
-);
+const root = document.getElementById("root");
+
+if (root) {
+  const appRoot = ReactDOM.createRoot(root);
+  appRoot.render(
+    <React.StrictMode>
+      <App />
+      <ToastContainer />
+    </React.StrictMode>
+  );
+}
